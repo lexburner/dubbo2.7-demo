@@ -1,7 +1,6 @@
 package org.apache.dubbo.demo.impl;
 
 import org.apache.dubbo.demo.api.NoResponse2Service;
-import org.apache.dubbo.demo.api.NoResponseService;
 import org.apache.dubbo.demo.model.Result;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

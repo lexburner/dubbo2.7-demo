@@ -11,10 +11,7 @@ import org.apache.dubbo.rpc.RpcException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.Map;
 
 /**
  * @author cvictory ON 2018/11/29
