@@ -12,5 +12,12 @@
     <artifactId>dubbo-basic-api</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId></groupId>
+            <artifactId></artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

@@ -10,22 +10,14 @@
 
     <dubbo:config-center address="zookeeper://127.0.0.1:2181"/>
 
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <!--<dubbo:metadata-report address="zookeeper://127.0.0.1:2181"/>-->
+
+    <!--<dubbo:registry address="zookeeper://127.0.0.1:2181" simplified="true"/>-->
 
     <!-- use dubbo protocol to export service on port 20880 -->
-    <dubbo:protocol name="dubbo" port="20880"/>
-
-    <!-- service implementation, as same as regular local bean -->
-    <!--<bean id="demoService" class="org.apache.dubbo.demo.impl.DemoServiceImpl"/>-->
-    <!--<bean id="userService" class="org.apache.dubbo.demo.impl.UserServiceImpl"/>-->
-    <!--<bean id="timeoutTestService" class="org.apache.dubbo.demo.impl.TimeoutTestServiceImpl"/>-->
-    <!--<bean id="noResponseService" class="org.apache.dubbo.demo.impl.NoResponseServiceImpl"/>-->
+    <dubbo:protocol name="dubbo" port="20881"/>
 
     <!-- declare the service interface to be exported -->
-    <dubbo:service interface="org.apache.dubbo.demo.api.DemoService" ref="demoService"/>
-    <dubbo:service interface="org.apache.dubbo.demo.api.UserService" ref="userService"/>
-    <dubbo:service interface="org.apache.dubbo.demo.api.TimeoutTestService" ref="timeoutTestService"/>
-    <dubbo:service interface="org.apache.dubbo.demo.api.NoResponseService" ref="noResponseService"/>
-    <dubbo:service interface="org.apache.dubbo.demo.api.NoResponse2Service" ref="noResponse2Service"/>
+    <dubbo:service interface="org.apache.dubbo.demo.api.DemoService" ref="demoService" executes="4500" retries="7" owner="kirito"/>
 
 </beans>
